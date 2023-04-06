@@ -1,4 +1,5 @@
 import SectionOne from "@/components/SectionOne";
+import SectionThree from "@/components/SectionThree";
 import SectionTwo from "@/components/SectionTwo";
 import Layout from "@/layout/Layout";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Layout>
         <SectionOne />
         <SectionTwo />
+        <SectionThree />
       </Layout>
     </>
   );
