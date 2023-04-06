@@ -1,4 +1,5 @@
 import SectionOne from "@/components/SectionOne";
+import SectionTwo from "@/components/SectionTwo";
 import Layout from "@/layout/Layout";
 
 import "swiper/css";
@@ -9,6 +10,7 @@ export default function Home() {
     <>
       <Layout>
         <SectionOne />
+        <SectionTwo />
       </Layout>
     </>
   );
