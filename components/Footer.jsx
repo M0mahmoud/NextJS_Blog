@@ -6,7 +6,7 @@ import Newslatter from "./_child/Newslatter";
 export const Footer = () => {
   return (
     <footer
-      className="bg-gray-50"
+      className="bg-gray-50 mx-auto px-5"
       style={{
         backgroundImage: "url('/images/footer.png')",
         backgroundRepeat: "no-repeat",

@@ -4,7 +4,7 @@ import SwiperContainer from "./SwiperContainer";
 const SectionOne = () => {
   return (
     <section
-      className="p-16"
+      className="mx-auto px-5 py-10"
       style={{
         background: 'url("/images/banner.png")',
         backgroundPosition: "right",

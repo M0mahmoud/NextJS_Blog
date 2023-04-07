@@ -3,9 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Author from "./Author";
 
-const Post = ({ data }) => {
-  const { id, title, category, img, published } = data;
-
+const Post = ({ id, title, category, img, published, author, subtitle }) => {
   return (
     <div className="item">
       <div className="images">
@@ -15,6 +13,8 @@ const Post = ({ data }) => {
             className="rounded"
             width={500}
             height={350}
+            alt="IMAGE"
+            style={{ width: "auto", height: "auto" }}
           />
         </Link>
       </div>
@@ -41,14 +41,8 @@ const Post = ({ data }) => {
             {title || "Title"}
           </Link>
         </div>
-        <p className="text-gray-500 py-3">
-          Even the all-powerful Pointing has no control about the blind texts it
-          is an almost unorthographic life One day however a small line of blind
-          text by the name of Lorem Ipsum decided to leave for the far World of
-          Grammar.
-        </p>
-
-        <Author />
+        <p className="text-gray-500 py-3">{subtitle || "No SubTitle"}</p>
+        {author ? <Author {...author}></Author> : <></>}
       </div>
     </div>
   );

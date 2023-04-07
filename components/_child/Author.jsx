@@ -2,24 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Author = () => {
+const Author = ({ name, img, designation }) => {
+  if (!name && !img) return <></>;
+
   return (
-    <div className="outhor flex py-5">
+    <div className="author flex py-5">
       <Image
-        src={"/images/author/author1.jpg"}
+        src={img || ""}
+        width={50}
+        height={50}
+        alt="IMAGE"
         className="rounded-full"
-        width={"60"}
-        height={"60"}
-        alt="AUTHOR IMAGE"
+        style={{ width: 'auto', height: 'auto' }}
       />
-      <div className="flex flex-col justify-center px-4 ">
+      <div className="flex flex-col justify-center px-4">
         <Link
           href={"/"}
-          className="text-md font-bold text-gray-800 hover:text-gray-600 "
+          className="text-md font-bold text-gray-800 hover:text-gray-600"
         >
-          Mahmoud Mohamed
+          {name || "No Name"}
         </Link>
-        <span className="text-sm text-gray-500">CEO and Founder</span>
+        <span className="text-sm text-gray-500">{designation || ""}</span>
       </div>
     </div>
   );
