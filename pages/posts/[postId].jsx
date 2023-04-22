@@ -1,9 +1,9 @@
-import getPost from "@/lib/helpers";
-import fetcher from "@/lib/fetcher";
-import Layout from "@/layout/Layout";
+import Article from "@/components/Article";
 import Error from "@/components/_child/Error";
 import Spinner from "@/components/_child/Loading";
-import Article from "@/components/Article";
+import Layout from "@/layout/Layout";
+import fetcher from "@/lib/fetcher";
+import getPost from "@/lib/helpers";
 import { useRouter } from "next/router";
 import { SWRConfig } from "swr";
 
